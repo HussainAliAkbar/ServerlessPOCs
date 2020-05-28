@@ -1,0 +1,31 @@
+service: serveless-medium
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+
+functions:
+  randomGenerator:
+    handler: functions/randomGenerator/randomGenerator.handler
+    package:
+      individually: true
+      exclude:
+        - "./**"
+      include:
+        - ./functions/randomGenerator/randomGenerator.js
+        - ./functions/randomGenerator/node_modules/**
+        - ./functions/randomGenerator/package.json
+  uuidGenerator:
+    handler: functions/uuidGenerator/uuidGenerator.handler
+    package:
+      individually: true
+      exclude:
+        - "./**"
+      include:
+        - ./functions/uuidGenerator/uuidGenerator.js
+        - ./functions/uuidGenerator/node_modules/**
+        - ./functions/uuidGenerator/package.json
+
+
+

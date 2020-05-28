@@ -6,3 +6,5 @@ https://medium.com/@hussain94aa/serverless-managing-environment-variables-effici
 
 Part 2:
 https://medium.com/@hussain94aa/serverless-managing-config-for-different-environments-with-s3-and-bash-scripts-ebe6f959a7e9
+
+TODO: Add Part 3:
