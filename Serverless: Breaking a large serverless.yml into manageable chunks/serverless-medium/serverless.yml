@@ -1,0 +1,10 @@
+service: serveless-medium
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  - ${file(./functions/randomGenerator/serverless.yml)}
+  - ${file(./functions/uuidGenerator/serverless.yml)}
+

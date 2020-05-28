@@ -1,0 +1,10 @@
+randomGenerator:
+  handler: functions/randomGenerator/randomGenerator.handler
+  package:
+    individually: true
+    exclude:
+      - "./**"
+    include:
+      - ./functions/randomGenerator/randomGenerator.js
+      - ./functions/randomGenerator/node_modules/**
+      - ./functions/randomGenerator/package.json
