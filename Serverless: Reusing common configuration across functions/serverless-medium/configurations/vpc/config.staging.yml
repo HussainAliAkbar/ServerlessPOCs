@@ -1,0 +1,5 @@
+vpc:
+  securityGroupIds:
+    - sg-1253
+  subnetIds:
+    - subnet-456

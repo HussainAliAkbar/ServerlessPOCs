@@ -1,0 +1,13 @@
+service: serveless-medium
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-1
+  role: arn:aws:iam::XXXXXXXXXXXX:role/lambda-defaults
+
+
+functions:
+  - ${file(./functions/randomGenerator/serverless.yml)}
+  - ${file(./functions/uuidGenerator/serverless.yml)}
+

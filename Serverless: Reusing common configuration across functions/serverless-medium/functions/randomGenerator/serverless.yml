@@ -1,0 +1,12 @@
+randomGenerator:
+  handler: functions/randomGenerator/randomGenerator.handler
+  package:
+    individually: true
+    exclude:
+      - "./**"
+    include:
+      - ./functions/randomGenerator/randomGenerator.js
+      - ./functions/randomGenerator/node_modules/**
+      - ./functions/randomGenerator/package.json
+  layers: ${file(./configurations/layers/config.yml):layers}
+  vpc: ${file(./configurations/vpc/config.${opt:stage, self:provider.stage}.yml):vpc}

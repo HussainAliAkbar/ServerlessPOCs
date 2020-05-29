@@ -1,0 +1,12 @@
+uuidGenerator:
+  handler: functions/uuidGenerator/uuidGenerator.handler
+  package:
+    individually: true
+    exclude:
+      - "./**"
+    include:
+      - ./functions/uuidGenerator/uuidGenerator.js
+      - ./functions/uuidGenerator/node_modules/**
+      - ./functions/uuidGenerator/package.json
+  layers: ${file(./configurations/layers/config.yml):layers}
+  vpc: ${file(./configurations/vpc/config.${opt:stage, self:provider.stage}.yml):vpc}

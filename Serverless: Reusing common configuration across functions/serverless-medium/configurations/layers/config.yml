@@ -1,0 +1,2 @@
+layers:
+  - arn:aws:lambda:ap-southeast-1:XXXXXXXXXXXX:layer:lambda-commons-layer:21
